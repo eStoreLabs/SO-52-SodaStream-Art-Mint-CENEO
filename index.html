@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sodastream Art Mint</title>
+    <style>
+			@charset "UTF-8";
+			@font-face {
+				font-family: "HurmeGeometricSans3-Bold";
+				src: local("HurmeGeometricSans3-Bold"), url("../fonts/HurmeGeometricSans3-Bold.woff") format("woff");
+			}
+			@font-face {
+				font-family: "HurmeGeometricSans3-Regular";
+				src: local("HurmeGeometricSans3-Regular"), url("../fonts/HurmeGeometricSans3-Regular.woff") format("woff");
+			}
+			@font-face {
+				font-family: "HurmeGeometricSans3-Black";
+				src: local("HurmeGeometricSans3-Black"), url("../fonts/HurmeGeometricSans3-Black.woff") format("woff");
+			}
+			@font-face {
+				font-family: "HurmeGeometricSans3-Light";
+				src: local("HurmeGeometricSans3-Light"), url("../fonts/HurmeGeometricSans3-Light.woff2") format("woff2");
+			}
+			#es-rc #es-rc-content {
+				font-family: "HurmeGeometricSans3-Regular", sans-serif;
+				font-size: 20px;
+				line-height: 1.2;
+				color: #eeeae5;
+				background-color: #13294b;
+				max-width: 990px;
+				margin: auto;
+				container: es-rc-content/inline-size;
+				overflow: hidden;
+			}
+			#es-rc #es-rc-content ::-moz-selection {
+				background-color: #eeeae5;
+				color: #13294b;
+			}
+			#es-rc #es-rc-content ::selection {
+				background-color: #eeeae5;
+				color: #13294b;
+			}
+			#es-rc #es-rc-content * {
+				box-sizing: border-box;
+			}
+			#es-rc #es-rc-content p {
+				margin: 0;
+			}
+			#es-rc #es-rc-content img {
+				width: 100%;
+				display: block;
+				margin: 0 auto;
+			}
+			#es-rc #es-rc-content button {
+				display: block;
+			}
+			#es-rc #es-rc-content .es-section {
+				padding: 32px;
+			}
+			#es-rc #es-rc-content .es-section-title {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				font-size: 32px;
+				text-align: center;
+				margin-block: 16px;
+				text-transform: uppercase;
+			}
+			@container es-rc-content (min-width: 660px) {
+				#es-rc #es-rc-content .es-section-title {
+					font-size: 48px;
+				}
+			}
+			#es-rc #es-rc-content .es-mobile {
+				display: block;
+			}
+			@container es-rc-content (min-width: 660px) {
+				#es-rc #es-rc-content .es-mobile {
+					display: none;
+				}
+			}
+			#es-rc #es-rc-content .es-decoration-1 {
+				display: none;
+			}
+			@container es-rc-content (min-width: 900px) {
+				#es-rc #es-rc-content .es-decoration-1 {
+					display: block;
+					width: 80px;
+					position: absolute;
+					left: -30px;
+					width: 70px;
+					top: -5px;
+				}
+			}
+			#es-rc #es-rc-content .es-desktop {
+				display: none;
+				position: relative;
+			}
+			@container es-rc-content (min-width: 660px) {
+				#es-rc #es-rc-content .es-desktop {
+					display: block;
+				}
+			}
+			@media (prefers-reduced-motion: reduce) {
+				#es-rc #es-rc-content * {
+					animation-duration: 0.01ms !important;
+					animation-iteration-count: 1 !important;
+					transition-duration: 0.01ms !important;
+					scroll-behavior: auto !important;
+				}
+			}
+			#es-rc #es-rc-content .es-kv {
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+			}
+			#es-rc #es-rc-content .es-kv__logo {
+				max-width: 300px;
+			}
+			#es-rc #es-rc-content .es-kv__title {
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-kv__title--headline {
+				margin-bottom: 10px;
+				margin-top: 40px;
+				font-family: "HurmeGeometricSans3-Black", sans-serif;
+				font-size: 35px;
+			}
+			#es-rc #es-rc-content .es-kv__title--mint {
+				color: #ABD3BC;
+			}
+			#es-rc #es-rc-content .es-kv__title--bottomline {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				font-size: 16px;
+			}
+			#es-rc #es-rc-content .es-kv__description-title {
+				margin-bottom: 35px;
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				text-align: center;
+				font-size: 30px;
+			}
+			#es-rc #es-rc-content .es-kv__packshot {
+				position: relative;
+			}
+			#es-rc #es-rc-content .es-kv__packshot__img {
+				max-height: 230px;
+				width: auto;
+				margin-block: 24px;
+			}
+			#es-rc #es-rc-content .es-kv__description__text {
+				font-size: 20px;
+				text-align: center;
+			}
+			@container es-rc-content (min-width: 440px) {
+				#es-rc #es-rc-content .es-kv__title--bottomline {
+					font-size: 22px;
+				}
+			}
+			@container es-rc-content (min-width: 550px) {
+				#es-rc #es-rc-content .es-kv__title--headline {
+					font-size: 45px;
+				}
+				#es-rc #es-rc-content .es-kv__title--bottomline {
+					font-size: 30px;
+				}
+				#es-rc #es-rc-content .es-kv__description__text {
+					font-size: 18px;
+				}
+			}
+			@container es-rc-content (min-width: 660px) {
+				#es-rc #es-rc-content .es-kv {
+					justify-content: space-between;
+					padding: 64px 48px;
+					padding-left: 40px;
+					padding-right: 40px;
+					overflow: hidden;
+				}
+				#es-rc #es-rc-content .es-kv__top {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: space-between;
+					width: 100%;
+					padding-left: 20px;
+				}
+				#es-rc #es-rc-content .es-kv__logo {
+					margin: 0;
+					max-width: 315px;
+				}
+				#es-rc #es-rc-content .es-kv__title {
+					text-align: left;
+					margin-top: 50px;
+				}
+				#es-rc #es-rc-content .es-kv .es-desktop {
+					width: 100%;
+				}
+				#es-rc #es-rc-content .es-kv__description {
+					margin-block: 64px;
+					width: 100%;
+				}
+				#es-rc #es-rc-content .es-kv__description__text {
+					text-align: center;
+				}
+				#es-rc #es-rc-content .es-kv__description__icon__img {
+					width: 100px;
+					margin-left: 24px;
+					margin-top: 24px;
+				}
+				#es-rc #es-rc-content .es-kv__packshot {
+					align-items: end;
+					position: relative;
+					margin: 0 auto;
+				}
+				#es-rc #es-rc-content .es-kv__packshot__img {
+					margin: 0;
+					max-height: 520px;
+					position: relative;
+					z-index: 1;
+				}
+				#es-rc #es-rc-content .es-kv__packshot__img--shadow {
+					position: absolute;
+					bottom: -26px;
+					right: -43%;
+					width: 450px !important;
+					z-index: 0;
+				}
+			}
+			@container es-rc-content (min-width: 768px) {
+				#es-rc #es-rc-content .es-kv__packshot {
+					position: relative;
+				}
+				#es-rc #es-rc-content .es-kv__packshot__img {
+					max-height: 600px;
+				}
+				#es-rc #es-rc-content .es-kv__description__icon__img {
+					width: 60%;
+				}
+			}
+			@container es-rc-content (min-width: 880px) {
+				#es-rc #es-rc-content .es-kv__logo {
+					max-width: 250px;
+					margin-left: -16px;
+					margin-bottom: 16px;
+				}
+				#es-rc #es-rc-content .es-kv__title--headline {
+					font-size: 40px;
+					margin-left: -6px;
+					margin-bottom: 30px;
+				}
+				#es-rc #es-rc-content .es-kv__title--bottomline {
+					font-size: 18px;
+				}
+				#es-rc #es-rc-content .es-kv__packshot {
+					margin-right: 32px;
+				}
+				#es-rc #es-rc-content .es-kv__packshot__img {
+					max-height: 650px;
+				}
+				#es-rc #es-rc-content .es-kv__description {
+					margin-block: 80px;
+				}
+				#es-rc #es-rc-content .es-kv__description__text {
+					font-size: 16px;
+					text-align: center;
+				}
+				#es-rc #es-rc-content .es-kv__description__icon__img {
+					width: 60%;
+				}
+			}
+			#es-rc #es-rc-content .es-product {
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-top: 20px;
+			}
+			#es-rc #es-rc-content .es-product__img {
+				max-width: 70%;
+				width: auto;
+			}
+			#es-rc #es-rc-content .es-product__img--second {
+				max-width: 35%;
+			}
+			#es-rc #es-rc-content .es-product__img--desktop {
+				display: none;
+			}
+			#es-rc #es-rc-content .es-product__title {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-product__list {
+				display: flex;
+				flex-direction: column;
+			}
+			#es-rc #es-rc-content .es-product__list-item-title {
+				margin-bottom: 10px;
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+			}
+			#es-rc #es-rc-content .es-product__list-item {
+				margin-bottom: 45px;
+			}
+			#es-rc #es-rc-content .es-product__list-item-subtitle {
+				font-family: "HurmeGeometricSans3-Regular", sans-serif;
+				font-size: 16px;
+			}
+			#es-rc #es-rc-content .es-product__subtitle {
+				margin-bottom: 30px;
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+			}
+			#es-rc #es-rc-content .es-product__description {
+				font-family: "HurmeGeometricSans3-Regular", sans-serif;
+				font-size: 16px;
+				max-width: 80%;
+			}
+			#es-rc #es-rc-content .es-product .es-decoration-2 {
+				display: none;
+			}
+			#es-rc #es-rc-content .es-design {
+				padding: 30px;
+				background: #71B6A0;
+				position: relative;
+				z-index: 0;
+			}
+			#es-rc #es-rc-content .es-design__single-img {
+				max-width: 100%;
+				width: auto;
+			}
+			#es-rc #es-rc-content .es-design__title {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				color: #13294b;
+			}
+			#es-rc #es-rc-content .es-design__description {
+				font-family: "HurmeGeometricSans3-Regular", sans-serif;
+				color: #13294b;
+			}
+			#es-rc #es-rc-content .es-design__saturator {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				align-items: center;
+				background-color: #71B6A0;
+			}
+			#es-rc #es-rc-content .es-design__img {
+				max-width: 40%;
+				width: auto;
+			}
+			#es-rc #es-rc-content .es-design__img-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 16px;
+				margin-block: 48px;
+			}
+			#es-rc #es-rc-content .es-design__description-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 16px;
+			}
+			#es-rc #es-rc-content .es-design__title {
+				max-width: 300px;
+				flex: 1;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-design__description {
+				flex: 1;
+				font-size: 17px;
+				text-align: center;
+				max-width: 300px;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-design__description--statement {
+				font-family: "HurmeGeometricSans3-Black", sans-serif;
+				font-size: 24px;
+				margin-bottom: 8px;
+			}
+			#es-rc #es-rc-content .es-design__description--disclaimer {
+				font-family: "HurmeGeometricSans3-Light", sans-serif;
+				font-size: 16px;
+				font-style: italic;
+			}
+			#es-rc #es-rc-content .es-design__logo {
+				max-width: 150px;
+			}
+			#es-rc #es-rc-content .es-design__text-container {
+				font-size: 20px;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-design__text--bold {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+			}
+			#es-rc #es-rc-content .es-design__text--light {
+				font-family: "HurmeGeometricSans3-Light", sans-serif;
+			}
+			#es-rc #es-rc-content .es-design__container {
+				margin-top: -1px;
+				background-color: #71B6A0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 30px;
+			}
+			#es-rc #es-rc-content .es-design__single {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 30px;
+				max-width: 300px;
+			}
+			#es-rc #es-rc-content .es-design__single-img {
+				max-width: 125px;
+			}
+			#es-rc #es-rc-content .es-design__single-title {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				color: #13294b;
+				font-size: 16px;
+				text-align: center;
+				min-height: 35px;
+			}
+			#es-rc #es-rc-content .es-design__single-subtitle {
+				font-family: "HurmeGeometricSans3-Regular", sans-serif;
+				color: #13294b;
+				text-align: center;
+				font-size: 14px;
+			}
+			@container es-rc-content (min-width: 660px) {
+				#es-rc #es-rc-content .es-design__img-container {
+					flex-direction: row;
+					align-items: flex-start;
+					position: relative;
+				}
+				#es-rc #es-rc-content .es-design__img {
+					margin: 0 auto;
+					flex: 1;
+				}
+				#es-rc #es-rc-content .es-design__description-container {
+					position: absolute;
+					max-width: 200px;
+					right: 0;
+					top: 0;
+				}
+				#es-rc #es-rc-content .es-design__logo {
+					width: 100px;
+					margin-right: 0;
+				}
+				#es-rc #es-rc-content .es-design__text-container {
+					font-size: 24px;
+				}
+			}
+			@container es-rc-content (min-width: 880px) {
+				#es-rc #es-rc-content .es-design__description-container {
+					right: 4%;
+					top: 6%;
+				}
+				#es-rc #es-rc-content .es-design__description--statement {
+					font-size: 32px;
+				}
+				#es-rc #es-rc-content .es-design__description--disclaimer {
+					font-size: 18px;
+				}
+			}
+			#es-rc #es-rc-content .es-slider {
+				margin-block: 32px;
+				margin-bottom: 0;
+				/* ukryte inputy sterujące */
+				/* wrapper ze slajdami */
+				/* slajdy */
+				/* przesuwanie zależnie od wybranego inputa */
+				/* przyciski */
+				/* ukrywanie niepotrzebnych przycisków */
+			}
+			#es-rc #es-rc-content .es-slider .swiper-button-prev:after,
+			#es-rc #es-rc-content .es-slider .swiper-rtl .swiper-button-next:after,
+			#es-rc #es-rc-content .es-slider .swiper-button-next:after,
+			#es-rc #es-rc-content .es-slider .swiper-rtl .swiper-button-next:after {
+				content: "";
+			}
+			#es-rc #es-rc-content .es-slider .swiper-button-next,
+			#es-rc #es-rc-content .es-slider .swiper-button-prev {
+				width: unset;
+				height: unset;
+				position: static;
+				justify-content: unset;
+				display: unset;
+			}
+			#es-rc #es-rc-content .es-slider__buttons {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				position: absolute;
+				top: 50%;
+				padding: 32px;
+			}
+			#es-rc #es-rc-content .es-slider__buttons--prev__img, #es-rc #es-rc-content .es-slider__buttons--next__img {
+				display: block;
+				width: 48px;
+				height: 48px;
+				margin: 0;
+			}
+			#es-rc #es-rc-content .es-slider__buttons--prev__img {
+				transform: rotate(180deg);
+			}
+			#es-rc #es-rc-content .es-slider__buttons--next {
+				margin-left: auto;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider {
+				margin-block: 32px;
+				position: relative;
+			}
+			#es-rc #es-rc-content .es-slider .swiper-button-prev:after,
+			#es-rc #es-rc-content .es-slider .swiper-rtl .swiper-button-next:after,
+			#es-rc #es-rc-content .es-slider .swiper-button-next:after,
+			#es-rc #es-rc-content .es-slider .swiper-rtl .swiper-button-next:after {
+				content: "";
+			}
+			#es-rc #es-rc-content .es-slider .swiper-button-next,
+			#es-rc #es-rc-content .es-slider .swiper-button-prev {
+				width: unset;
+				height: unset;
+				position: static;
+				justify-content: unset;
+			}
+			#es-rc #es-rc-content .es-slider input[type=radio] {
+				display: none;
+			}
+			#es-rc #es-rc-content .es-slider .es-swiper {
+				position: relative;
+				width: 100%;
+			}
+			#es-rc #es-rc-content .es-slider .es-swiper-wrapper {
+				display: flex;
+				transition: transform 0.5s ease;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__slide {
+				flex: 0 0 100%;
+				box-sizing: border-box;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#es-rc #es-rc-content .es-slider #es-slide-1:checked ~ .es-swiper .es-swiper-wrapper {
+				transform: translateX(0%);
+			}
+			#es-rc #es-rc-content .es-slider #es-slide-2:checked ~ .es-swiper .es-swiper-wrapper {
+				transform: translateX(-100%);
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__buttons {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				right: 0;
+				display: flex;
+				justify-content: space-between;
+				transform: translateY(-50%);
+				pointer-events: none;
+				/* żeby klik działał tylko na label */
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__buttons label {
+				pointer-events: all;
+				cursor: pointer;
+				background: none;
+				border: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#es-rc #es-rc-content .es-slider #es-slide-1:checked ~ .es-swiper .es-slider__buttons--prev {
+				display: none;
+			}
+			#es-rc #es-rc-content .es-slider #es-slide-2:checked ~ .es-swiper .es-slider__buttons--next {
+				display: none;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__buttons {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				position: absolute;
+				top: 50%;
+				padding: 32px;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__buttons--prev__img,
+			#es-rc #es-rc-content .es-slider .es-slider__buttons--next__img {
+				display: block;
+				width: 48px;
+				height: 48px;
+				margin: 0;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__buttons--prev__img {
+				transform: rotate(180deg);
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__buttons--next {
+				margin-left: auto;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__slide {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				padding: 32px;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__slide__right {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__slide__title {
+				font-family: "HurmeGeometricSans3-Black", sans-serif;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__slide__text {
+				padding-right: 32px;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__slide--1 {
+				background-color: #7FBFF5;
+				z-index: 0;
+				color: #eeeae5;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__slide--2 {
+				background-color: #005BAB;
+				color: #13294b;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__slide--2 ::-moz-selection {
+				background-color: #13294b;
+				color: #eeeae5;
+			}
+			#es-rc #es-rc-content .es-slider .es-slider__slide--2 ::selection {
+				background-color: #13294b;
+				color: #eeeae5;
+			}
+			#es-rc #es-rc-content .es-slider__slide {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				padding: 32px;
+			}
+			#es-rc #es-rc-content .es-slider__slide__right {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-slider__slide__title {
+				font-family: "HurmeGeometricSans3-Black", sans-serif;
+			}
+			#es-rc #es-rc-content .es-slider__slide__text {
+				padding-right: 32px;
+			}
+			#es-rc #es-rc-content .es-slider__slide--1 {
+				background-color: #7FBFF5;
+				color: #eeeae5;
+			}
+			#es-rc #es-rc-content .es-slider__slide--2 {
+				background-color: #eeeae5;
+				color: #13294b;
+			}
+			#es-rc #es-rc-content .es-slider__slide--2 ::-moz-selection {
+				background-color: #13294b;
+				color: #eeeae5;
+			}
+			#es-rc #es-rc-content .es-slider__slide--2 ::selection {
+				background-color: #13294b;
+				color: #eeeae5;
+			}
+			@container es-rc-content (min-width: 660px) {
+				#es-rc #es-rc-content .es-slider__slide {
+					gap: 48px;
+					font-size: 24px;
+				}
+				#es-rc #es-rc-content .es-slider__slide__right {
+					gap: 24px;
+				}
+			}
+			@container es-rc-content (min-width: 756px) {
+				#es-rc #es-rc-content .es-slider__slide__right {
+					text-align: left;
+					flex: 1 1 0;
+				}
+				#es-rc #es-rc-content .es-slider__slide__left {
+					flex: 1 1 0;
+				}
+				#es-rc #es-rc-content .es-slider__slide__text {
+					padding-right: 48px;
+				}
+			}
+			#es-rc #es-rc-content .es-steps {
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				gap: 32px;
+				background: linear-gradient(180deg, #13294b 35%, #eeeae5 35%);
+			}
+			#es-rc #es-rc-content .es-steps__img {
+				max-width: 500px;
+			}
+			#es-rc #es-rc-content .es-steps__title {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				font-size: 21px;
+				color: #13294b;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-steps__title--white {
+				color: #fff;
+			}
+			#es-rc #es-rc-content .es-steps__subtitle {
+				font-family: "HurmeGeometricSans3-Regular", sans-serif;
+				color: #13294b;
+				font-size: 18px;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-steps__subtitle--white {
+				color: #fff;
+			}
+			#es-rc #es-rc-content .es-steps__steps-item-title {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				font-size: 18px;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-steps__steps-item-title--white {
+				color: #fff;
+				font-size: 16px;
+			}
+			#es-rc #es-rc-content .es-steps__steps__item__text {
+				font-family: "HurmeGeometricSans3-Regular", sans-serif;
+				font-size: 16px;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-steps__steps__item__text--white {
+				color: #fff;
+			}
+			#es-rc #es-rc-content .es-steps__disclaimer {
+				font-family: "HurmeGeometricSans3-Regular", sans-serif;
+				color: #13294b;
+				font-size: 10px;
+			}
+			#es-rc #es-rc-content .es-steps__steps__container {
+				color: #13294b;
+			}
+			#es-rc #es-rc-content .es-steps__steps__container ::-moz-selection {
+				background-color: #13294b;
+				color: #eeeae5;
+			}
+			#es-rc #es-rc-content .es-steps__steps__container ::selection {
+				background-color: #13294b;
+				color: #eeeae5;
+			}
+			#es-rc #es-rc-content .es-steps__steps__title {
+				font-family: "HurmeGeometricSans3-Black", sans-serif;
+				font-size: 32px;
+			}
+			#es-rc #es-rc-content .es-steps__steps__wrapper {
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+				align-items: center;
+			}
+			#es-rc #es-rc-content .es-steps__steps__item {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+				max-width: 200px;
+			}
+			#es-rc #es-rc-content .es-steps__steps__item__number {
+				font-family: "HurmeGeometricSans3-Black", sans-serif;
+				font-size: 45px;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-steps__steps__item__image {
+				max-width: 100px;
+			}
+			#es-rc #es-rc-content .es-steps__steps__item__image--big {
+				max-width: 150px;
+			}
+			@container es-rc-content (min-width: 660px) {
+				#es-rc #es-rc-content .es-steps {
+					background: linear-gradient(180deg, #13294b 50%, #eeeae5 50%);
+				}
+				#es-rc #es-rc-content .es-steps__text {
+					font-size: 24px;
+				}
+				#es-rc #es-rc-content .es-steps__steps__title {
+					font-size: 34px;
+				}
+				#es-rc #es-rc-content .es-steps__steps__wrapper {
+					margin-bottom: 30px;
+					flex-direction: row;
+					align-items: start;
+					justify-content: space-evenly;
+				}
+				#es-rc #es-rc-content .es-steps__steps__wrapper--second {
+					gap: 50px;
+				}
+				#es-rc #es-rc-content .es-steps__steps__item {
+					max-width: 250px;
+				}
+			}
+			#es-rc #es-rc-content .es-features {
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-features .es-section-title {
+				text-transform: none;
+			}
+			#es-rc #es-rc-content .es-features__text--bold {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+			}
+			#es-rc #es-rc-content .es-features__wrapper {
+				margin-top: 64px;
+			}
+			#es-rc #es-rc-content .es-features__container {
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+				align-items: center;
+				margin-block: 32px;
+			}
+			#es-rc #es-rc-content .es-features__container__item {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+				align-items: center;
+				max-width: 300px;
+			}
+			#es-rc #es-rc-content .es-features__container__item__img {
+				max-width: 300px;
+			}
+			#es-rc #es-rc-content .es-features__container__item__text--bold {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+			}
+			@container es-rc-content (min-width: 660px) {
+				#es-rc #es-rc-content .es-features__text {
+					font-size: 24px;
+				}
+				#es-rc #es-rc-content .es-features__container {
+					position: relative;
+				}
+				#es-rc #es-rc-content .es-features__container__img {
+					margin-block: 150px;
+					max-width: 90%;
+				}
+				#es-rc #es-rc-content .es-features__container__item {
+					position: absolute;
+					max-width: 290px;
+				}
+				#es-rc #es-rc-content .es-features__container__item--1 {
+					top: 0%;
+					left: 1%;
+				}
+				#es-rc #es-rc-content .es-features__container__item--2 {
+					right: -3%;
+					top: 9%;
+				}
+				#es-rc #es-rc-content .es-features__container__item--3 {
+					bottom: 2%;
+					left: 11%;
+				}
+			}
+			@container es-rc-content (min-width: 880px) {
+				#es-rc #es-rc-content .es-features__container__item--1 {
+					left: 1%;
+				}
+				#es-rc #es-rc-content .es-features__container__item--2 {
+					right: 2%;
+				}
+				#es-rc #es-rc-content .es-features__container__item--3 {
+					left: 13%;
+				}
+			}
+			#es-rc #es-rc-content .es-faq__link-container {
+				text-decoration: none;
+			}
+			#es-rc #es-rc-content .es-faq__link {
+				width: 200px;
+				margin: 0 auto;
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				background: #13294b;
+				padding: 10px 20px;
+				border-radius: 40px;
+				color: #ffffff;
+				text-decoration: none;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-faq__packshot {
+				display: block;
+				width: 100%;
+				max-width: 200px;
+				max-height: 100%;
+				margin: 0 auto;
+				margin-left: -20px;
+				margin-bottom: 20px;
+			}
+			#es-rc #es-rc-content .es-faq {
+				padding-top: 15px;
+				padding-bottom: 40px;
+				background-color: #7FBFF5;
+				color: #ffffff;
+				position: relative;
+				z-index: 1;
+			}
+			#es-rc #es-rc-content .es-decoration-3 {
+				display: none;
+			}
+			#es-rc #es-rc-content .es-faq__title {
+				padding-left: 25px;
+				padding-bottom: 20px;
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				font-size: 20px;
+				margin-bottom: 10px;
+				color: #13294b;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-faq__item-check {
+				width: 30px;
+			}
+			#es-rc #es-rc-content .es-faq__items {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+			#es-rc #es-rc-content .es-faq__item-visible {
+				display: flex;
+				flex-direction: row;
+				gap: 10px;
+				align-items: center;
+			}
+			#es-rc #es-rc-content .es-faq .es-accordion [type=checkbox] + label:after,
+			#es-rc #es-rc-content [type=checkbox] + label:before {
+				display: none;
+			}
+			#es-rc #es-rc-content .es-faq .es-accordion {
+				margin: 0 auto;
+				max-width: 990px;
+			}
+			#es-rc #es-rc-content .es-faq .es-accordion__element {
+				margin: 0 auto;
+				margin-bottom: 10px;
+				padding-bottom: 30px;
+				border: none;
+			}
+			#es-rc #es-rc-content .es-faq .es-accordion__element:last-of-type {
+				border-bottom: none;
+			}
+			#es-rc #es-rc-content .es-faq .es-accordion__element-content {
+				font-size: 14px;
+				line-height: 1.4;
+				color: #13294b;
+				background-color: #fff;
+				overflow: hidden;
+				margin-top: -30px;
+				padding-left: 30px;
+				padding-right: 20px;
+				padding-bottom: 10px;
+				max-height: 0;
+				transition: max-height 0.5s ease-out;
+				border-radius: 5px;
+			}
+			#es-rc #es-rc-content .es-faq .es-accordion__title {
+				padding: 15px 50px 15px 15px;
+				font-size: 14px;
+				color: #fff;
+				background-color: #13294b;
+				transition: all 200ms ease-out;
+				border-radius: 5px;
+				font-family: "HurmeGeometricSans3-Regular", sans-serif;
+				font-weight: 700;
+				cursor: pointer;
+				z-index: 1;
+				position: relative;
+			}
+			#es-rc #es-rc-content .es-faq .es-accordion .es-accordion__arrow {
+				width: 35px;
+				position: absolute;
+				right: 15px;
+				top: 5px;
+				margin: auto 0;
+				transition: all 0.3s ease-out;
+			}
+			#es-rc #es-rc-content .es-faq .es-accordion .active .es-accordion__arrow {
+				transform: rotate(180deg);
+			}
+			#es-rc #es-rc-content .es-accordion__checkbox {
+				display: none;
+			}
+			#es-rc #es-rc-content .es-accordion__element-content {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.4s ease;
+				padding-left: 30px;
+				padding-right: 20px;
+				padding-bottom: 0;
+				margin-top: -30px;
+			}
+			#es-rc #es-rc-content .es-accordion__checkbox:checked ~ .es-accordion__element-content {
+				max-height: 500px;
+				padding-bottom: 10px;
+			}
+			#es-rc #es-rc-content .es-accordion__title {
+				display: block;
+				padding: 4px 15px 17px 60px;
+				font-size: 14px;
+				color: #fff;
+				cursor: pointer;
+				position: relative;
+			}
+			#es-rc #es-rc-content .es-accordion__arrow {
+				width: 17px;
+				position: absolute;
+				right: 28px;
+				top: 10px;
+				transition: transform 0.3s ease;
+			}
+			#es-rc #es-rc-content .es-accordion__checkbox:checked + .es-accordion__title .es-accordion__arrow {
+				transform: rotate(180deg);
+			}
+			#es-rc #es-rc-content .es-eco {
+				background: #005BAB;
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
+			#es-rc #es-rc-content .es-eco__img {
+				max-width: 100%;
+				width: auto;
+			}
+			#es-rc #es-rc-content .es-eco__right-title {
+				margin-bottom: 50px;
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				font-size: 20px;
+			}
+			#es-rc #es-rc-content .es-eco__right-description {
+				font-family: "HurmeGeometricSans3-Regular", sans-serif;
+				font-size: 16px;
+			}
+			#es-rc #es-rc-content .es-eco__right-description--bold {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+			}
+			#es-rc #es-rc-content .es-cross__container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			#es-rc #es-rc-content .es-cross__single {
+				padding: 25px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 20px;
+			}
+			#es-rc #es-rc-content .es-cross__single-title {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				font-size: 16px;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-cross__single-title--blue {
+				color: #13294b;
+			}
+			#es-rc #es-rc-content .es-cross__single-description {
+				font-family: "HurmeGeometricSans3-Regular", sans-serif;
+				font-size: 16px;
+				text-align: center;
+			}
+			#es-rc #es-rc-content .es-cross__single-description--blue {
+				color: #13294b;
+			}
+			#es-rc #es-rc-content .es-cross__img {
+				max-width: 55%;
+				width: auto;
+			}
+			#es-rc #es-rc-content .es-cross__single--2 {
+				background-color: #F6C641;
+			}
+			#es-rc #es-rc-content .es-cross__single--3 {
+				background-color: #E25D5F;
+			}
+			#es-rc #es-rc-content .es-footer {
+				margin-bottom: 64px;
+				background-color: #005BAB;
+			}
+			#es-rc #es-rc-content .es-footer .es-section-title {
+				text-transform: none;
+			}
+			#es-rc #es-rc-content .es-footer__hashtag {
+				padding-top: 50px;
+				margin-top: 0;
+				font-size: 20px;
+			}
+			#es-rc #es-rc-content .es-footer__headline {
+				font-size: 24px;
+			}
+			#es-rc #es-rc-content .es-footer__logo {
+				max-width: 200px;
+				padding-bottom: 50px;
+			}
+			@container es-rc-content (min-width: 660px) {
+				#es-rc #es-rc-content .es-footer__headline {
+					font-size: 32px;
+				}
+			}
+			@media screen and (min-width: 650px) {
+				#es-rc #es-rc-content .es-design__saturator {
+					flex-direction: row;
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+				#es-rc #es-rc-content .es-design__img {
+					max-width: 30%;
+				}
+				#es-rc #es-rc-content .es-faq__title {
+					font-family: "HurmeGeometricSans3-Bold", sans-serif;
+					margin: 0 auto;
+					font-size: 21px;
+					text-align: center;
+					color: #13294b !important;
+					font-weight: bold;
+					margin-bottom: 30px;
+				}
+				#es-rc #es-rc-content .es-faq .es-accordion {
+					max-width: none;
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+				#es-rc #es-rc-content .es-faq .es-accordion__title {
+					font-size: 18px;
+				}
+				#es-rc #es-rc-content .es-faq .es-accordion__element-content p {
+					font-size: 16px;
+				}
+			}
+			@media screen and (min-width: 768px) {
+				#es-rc #es-rc-content .es-design {
+					padding-bottom: 150px;
+					background-color: #71B6A0;
+				}
+				#es-rc #es-rc-content .es-design__img {
+					margin-top: -150px;
+				}
+				#es-rc #es-rc-content .es-design__wrapper {
+					background: #71B6A0;
+					border-radius: 50%;
+					width: 125%;
+					height: 375px;
+					top: -10%;
+					left: -12%;
+					right: 0;
+					z-index: -1;
+					position: absolute;
+				}
+				#es-rc #es-rc-content .es-design__container {
+					flex-direction: row;
+					justify-content: space-around;
+				}
+				#es-rc #es-rc-content .es-design__single {
+					max-width: 200px;
+				}
+				#es-rc #es-rc-content .es-eco {
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+				#es-rc #es-rc-content .es-eco__img {
+					max-width: 75%;
+				}
+				#es-rc #es-rc-content .es-eco__container {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-around;
+					align-items: center;
+					padding-bottom: 40px;
+				}
+				#es-rc #es-rc-content .es-eco__bottom-title {
+					font-family: "HurmeGeometricSans3-Bold", sans-serif;
+					font-size: 20px;
+					text-align: center;
+				}
+				#es-rc #es-rc-content .es-eco__left, #es-rc #es-rc-content .es-eco__right {
+					max-width: 50%;
+				}
+				#es-rc #es-rc-content .es-slider {
+					position: relative;
+					padding-bottom: 100px;
+					background-color: #7FBFF5;
+					z-index: 0;
+				}
+				#es-rc #es-rc-content .es-slider__slide--1 {
+					position: relative;
+				}
+				#es-rc #es-rc-content .es-slider__slide--2 {
+					position: relative;
+				}
+				#es-rc #es-rc-content .es-slider__wrapper {
+					background-color: #7FBFF5;
+					border-radius: 50%;
+					width: 108%;
+					height: 252px;
+					top: -15%;
+					left: -4%;
+					right: 0;
+					z-index: -1;
+					position: absolute;
+				}
+				#es-rc #es-rc-content .es-slider__wrapper--2 {
+					background-color: #005BAB;
+				}
+				#es-rc #es-rc-content .es-product {
+					background: #13294b;
+					position: relative;
+					padding-bottom: 100px;
+					z-index: 0;
+				}
+				#es-rc #es-rc-content .es-product__wrapper {
+					background: #13294b;
+					border-radius: 50%;
+					width: 125%;
+					height: 455px;
+					top: -10%;
+					left: -12%;
+					right: 0;
+					z-index: -1;
+					position: absolute;
+				}
+				#es-rc #es-rc-content .es-product__title {
+					font-family: "HurmeGeometricSans3-Bold", sans-serif;
+					text-align: center;
+				}
+				#es-rc #es-rc-content .es-product__img {
+					display: none;
+				}
+				#es-rc #es-rc-content .es-product__img--second {
+					display: block;
+				}
+				#es-rc #es-rc-content .es-product__img--desktop {
+					display: block;
+					max-width: 50%;
+				}
+				#es-rc #es-rc-content .es-product__container {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: center;
+					gap: 20px;
+					padding-right: 20px;
+					padding-left: 20px;
+					padding-top: 40px;
+				}
+				#es-rc #es-rc-content .es-product__container--second {
+					flex-direction: row-reverse;
+					position: relative;
+				}
+				#es-rc #es-rc-content .es-product__container .es-decoration-2 {
+					display: block;
+					position: absolute;
+					bottom: -95px;
+					left: -20px;
+					width: 180px;
+				}
+				#es-rc #es-rc-content .es-cross__container {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: flex-start;
+					gap: 0;
+				}
+				#es-rc #es-rc-content .es-cross__single-title {
+					min-height: 72px;
+				}
+				#es-rc #es-rc-content .es-cross__single-description {
+					min-height: 260px;
+				}
+				#es-rc #es-rc-content .es-cross__single {
+					max-width: 33.4%;
+					padding-top: 20px;
+					padding-bottom: 20px;
+				}
+			}
+			@media screen and (min-width: 998px) {
+				#es-rc #es-rc-content .es-kv {
+					position: relative;
+					gap: 115px;
+					padding-bottom: 150px;
+				}
+				#es-rc #es-rc-content .es-kv__packshot {
+					position: absolute;
+					top: 5%;
+					right: 0;
+				}
+				#es-rc #es-rc-content .es-kv__packshot__img {
+					max-height: 410px;
+				}
+				#es-rc #es-rc-content .es-kv__title {
+					text-align: left;
+					margin-top: 50px;
+					max-width: 400px;
+				}
+				#es-rc #es-rc-content .es-cross__single-description {
+					min-height: 200px;
+				}
+				#es-rc #es-rc-content .es-design__img {
+					margin-top: -250px;
+					max-width: 36%;
+				}
+				#es-rc #es-rc-content .es-design__title {
+					margin-top: -100px;
+				}
+				#es-rc #es-rc-content .es-design__description {
+					margin-top: -100px;
+				}
+				#es-rc #es-rc-content .es-design__single-subtitle {
+					min-height: 150px;
+				}
+				#es-rc #es-rc-content .es-faq {
+					position: relative;
+				}
+				#es-rc #es-rc-content .es-faq .es-decoration-3 {
+					position: absolute;
+					display: block;
+					top: -75px;
+					right: 20px;
+					width: 140px;
+				}
+			}/*# sourceMappingURL=styles.css.map */
+		</style>
+</head>
+
+	<body>
+		<div id="es-rc">
+			<div id="es-rc-content">
+				<div class="es-kv es-section">
+					<div class="es-kv__top">
+						<div>
+							<img loading="lazy"
+									 class="es-kv__logo"
+									 src="./static/img/logo.png"
+									 alt="logo Sodastream">
+							<div class="es-kv__title">
+								<p class="es-kv__title--headline">Poczuj <span class="es-kv__title--mint">miętę</span> do&nbsp;bąbelków!
+								</p>
+								<p class="es-kv__title--bottomline">Saturator do wody gazowanej <br>SodaStream&nbsp;Art,&nbsp;Miętowy
+								</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="es-kv__packshot">
+						<img loading="lazy"
+								 class="es-kv__packshot__img"
+								 src="./static/img/kv_pack.png"
+								 alt="Butelka SodaStream Fuse Pepsi made by you">
+					</div>
+
+					<div class="es-desktop">
+						<img loading="lazy"
+								 src="./static/img/decoration-1.png"
+								 alt="Bubbles"
+								 class="es-decoration-1">
+						<div class="es-kv__description">
+							<p class="es-kv__description-title">Zacznij orzeźwiającą przygodę w&nbsp;wielkim&nbsp;stylu</p>
+							<p class="es-kv__description__text">
+								Zostań artystą smaku z miętowym saturatorem SodaStream Art! Zakochaj się w nowym,
+								miętowym wydaniu stylowego ekspresu do
+								gazowania wody, który wniesie powiew świeżości do każdego wnętrza. To połączenie
+								retro designu
+								z&nbsp;nowoczesną funkcjonalnością, które zachwyca wygodą użytkowania i przyciąga uwagę
+								wyrazistą stylistyką. Chromowane
+								detale i dźwignia w stylu retro nadają urządzeniu wyjątkowego charakteru, a jego
+								ponadczasowy design sprawia, że
+								doskonale wpisuje się nie tylko w kuchenną przestrzeń, ale także w nowoczesne biuro
+								czy stylowy salon.
+							</p>
+						</div>
+					</div>
+
+					<div class="es-mobile">
+						<div class="es-kv__description"
+								 aria-hidden="true">
+							<p class="es-kv__description-title">Zacznij orzeźwiającą przygodę w wielkim stylu</p>
+							<p class="es-kv__description__text">
+								Zostań artystą smaku z miętowym saturatorem SodaStream Art! Zakochaj się w nowym,
+								miętowym wydaniu stylowego ekspresu do
+								gazowania wody, który wniesie powiew świeżości do każdego wnętrza. To połączenie retro
+								designu
+								z nowoczesną funkcjonalnością, które zachwyca wygodą użytkowania i przyciąga uwagę
+								wyrazistą stylistyką. Chromowane
+								detale i dźwignia w stylu retro nadają urządzeniu wyjątkowego charakteru, a jego
+								ponadczasowy design sprawia, że
+								doskonale wpisuje się nie tylko w kuchenną przestrzeń, ale także w nowoczesne biuro czy
+								stylowy salon.
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="es-design">
+					<div class="es-design__wrapper">
+					</div>
+					<div class="es-design__saturator">
+						<p class="es-design__title">Designerski ukłon w stronę przeszłości – z nowoczesnym podejściem do
+							codzienności
+						</p>
+						<img loading="lazy"
+								 src="./static/img/design-packshot.png"
+								 alt="Design packshota"
+								 class="es-design__img">
+						<p class="es-design__description">Design inspirowany stylem retro oraz funkcjonalność
+							inspirowana
+							wygodą – Saturator SodaStream Art Miętowy to coś więcej
+							niż urządzenie kuchenne,
+							to wyraz stylu życia — nowoczesnego, ekologicznego i wygodnego.
+						</p>
+					</div>
+					<div class="es-design__container">
+						<div class="es-design__single">
+							<img loading="lazy"
+									 src="./static/img/design-1.png"
+									 alt="Bezprzewodowa technologia"
+									 class="es-design__single-img">
+							<p class="es-design__single-title">
+								Bezprzewodowa <br>technologia
+							</p>
+							<p class="es-design__single-subtitle">Urządzenie nie wymaga zasilania prądem, dzięki czemu
+								możesz przygotować napój gazowany
+								w każdej chwili – wygodnie i bez ograniczeń.
+							</p>
+						</div>
+						<div class="es-design__single">
+							<img loading="lazy"
+									 src="./static/img/design-2.png"
+									 alt="Opatentowany system"
+									 class="es-design__single-img">
+							<p class="es-design__single-title">
+								Opatentowany system
+								Quick Connect
+							</p>
+							<p class="es-design__single-subtitle">Cylinder z gazem spożywczym
+								CO2 zainstalujesz prosto, intuicyjnie i bez wkręcania.
+							</p>
+						</div>
+						<div class="es-design__single">
+							<img loading="lazy"
+									 src="./static/img/design-3.png"
+									 alt="Montaż butelki"
+									 class="es-design__single-img">
+							<p class="es-design__single-title">
+								Montaż butelki<br>
+								Snap-Lock
+							</p>
+							<p class="es-design__single-subtitle">Intuicyjny system montażu
+								Snap-Lock pozwala szybko
+								i sprawnie zamontować butelkę - na klik.
+							</p>
+						</div>
+						<div class="es-design__single">
+							<img loading="lazy"
+									 src="./static/img/design-4.png"
+									 alt="Kompaktowa forma"
+									 class="es-design__single-img">
+							<p class="es-design__single-title">
+								Kompaktowa<br>
+								forma
+							</p>
+							<p class="es-design__single-subtitle">
+								Poręczny design urządzenia nie tylko wygląda stylowo, ale też pozwala zaoszczędzić cenne
+								miejsce w kuchni.
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="es-product">
+					<div class="es-product__wrapper"></div>
+					<p class="es-product__title">Dodaj odrobinę bąbelków do codzienności z saturatorem SodaStream Art <br>
+						w orzeźwiająco miętowym kolorze. Sprawdź, co znajdziesz w zestawie:
+					</p>
+					<div class="es-product__container">
+						<img loading="lazy"
+								 src="./static/img/product.png"
+								 alt="Saturator SodaStream"
+								 class="es-product__img">
+						<img loading="lazy"
+								 src="./static/img/product-d.png"
+								 alt="Saturator SodaStream"
+								 class="es-product__img es-product__img--desktop">
+						<div class="es-product__list">
+							<div class="es-product__list-item">
+								<p class="es-product__list-item-title">Saturator SodaStream Art Miętowy</p>
+								<p class="es-product__list-item-subtitle">Ekspres do gazowania wody - kompaktowy,
+									wytrzymały&nbsp;i&nbsp;ponadczasowy.
+								</p>
+							</div>
+							<div class="es-product__list-item">
+								<p class="es-product__list-item-title">Różowy cylinder z gazem CO₂</p>
+								<p class="es-product__list-item-subtitle">Łatwy do zamontowania, odpowiedni do wykreowania
+									nawet 60 l wody gazowanej.
+								</p>
+							</div>
+							<div class="es-product__list-item">
+								<p class="es-product__list-item-title">Butelka SodaStream Silver Elegance 1l</p>
+								<p class="es-product__list-item-subtitle">
+									Wykonana z trwałego i wolnego od BPA Tritanu, dostosowana do mycia w zmywarce.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="es-product__container es-product__container--second">
+						<img loading="lazy"
+								 src="./static/img/product-2.png"
+								 alt="Miętowa kropka"
+								 class="es-product__img es-product__img--second">
+						<div class="es-product__second-container">
+							<img loading="lazy"
+									 src="./static/img/decoration-2.png"
+									 alt="Bubbles"
+									 class="es-decoration-2">
+							<p class="es-product__subtitle">Miętowa kropka nad „i”, <br>
+								czyli jeszcze więcej bąbelkowej radości
+							</p>
+							<p class="es-product__description">Uzupełnij zestaw o butelkę Fizz&Go w dopasowanym, miętowym odcieniu! To
+								wyjątkowa butelka termiczna do gazowania wody,
+								która utrzymuje odpowiednią temperaturę zarówno zimnych jak i ciepłych napojów. Zabierz ją ze sobą do
+								pracy, na
+								wycieczkę lub trening i ciesz się idealnym smakiem napoju w stylowej oprawie.</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="es-slider">
+					<input type="radio"
+								 name="es-slide"
+								 id="es-slide-1"
+								 checked />
+					<input type="radio"
+								 name="es-slide"
+								 id="es-slide-2" />
+					<div class="swiper es-swiper">
+						<div class="swiper-wrapper es-swiper-wrapper">
+							<div class="swiper-slide es-slider__slide es-slider__slide--1">
+								<div class="es-slider__wrapper"></div>
+								<p class="es-steps__title">Sztuka kreowania bąbelków w trzech prostych krokach</p>
+								<p class="es-steps__subtitle">Saturator do gazowania wody SodaStream Art Miętowy jest bajecznie prosty w
+									obsłudze.
+									Wykreujesz&nbsp;ulubiony&nbsp;napój w kilka chwil, a później – natychmiast zakochasz się w pełnych
+									świeżości
+									bąbelkach.</p>
+								<div class="es-steps__steps__container">
+
+									<div class="es-steps__steps__wrapper">
+										<div class="es-steps__steps__item">
+											<p class="es-steps__steps__item__number">1</p>
+											<img loading="lazy"
+													 class="es-steps__steps__item__image"
+													 src="./static/img/steps-1.png"
+													 alt="Krok 1">
+											<p class="es-steps__steps-item-title">Krok 1.</p>
+											<p class="es-steps__steps__item__text">
+												Nalej zimną, świeżą wodę do butelkiSodaStream*.</p>
+										</div>
+										<div class="es-steps__steps__item">
+											<p class="es-steps__steps__item__number">2</p>
+											<img loading="lazy"
+													 class="es-steps__steps__item__image"
+													 src="./static/img/steps-2.png"
+													 alt="Krok 2">
+											<p class="es-steps__steps-item-title">Krok 2.</p>
+											<p class="es-steps__steps__item__text">Zamontuj butelkę w saturatorze SodaStream Art i ustaw ją
+												w pozycji pionowej.</p>
+										</div>
+										<div class="es-steps__steps__item">
+											<p class="es-steps__steps__item__number">3</p>
+											<img loading="lazy"
+													 class="es-steps__steps__item__image"
+													 src="./static/img/steps-3.png"
+													 alt="Krok 3">
+											<p class="es-steps__steps-item-title">Krok 3.</p>
+											<p class="es-steps__steps__item__text">
+												Nagazuj wodę tak, jak lubisz.
+												Przelej do szklanki i jeśli masz ochotę – dodaj syrop i ulubione dodatki.
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="es-steps__disclaimer">
+									*PAMIĘTAJ! Nie gazuj wody z dodatkami oraz innych płynów, np. soków. Owoce lub syrop zawsze dodawaj do
+									nagazowanej wody.
+								</p>
+							</div>
+							<div class="swiper-slide es-slider__slide es-slider__slide--2">
+								<div class="es-slider__wrapper es-slider__wrapper--2"></div>
+								<p class="es-steps__title es-steps__title--white">Pełna kontrola nad bąbelkami</p>
+								<p class="es-steps__subtitle es-steps__subtitle--white">
+									Dopasuj poziom nagazowania do swojego gustu – wybierz delikatny, wyrazisty lub intensywny gaz.
+									Dzięki pełnej kontroli nad ilością gazu stworzysz napoje dokładnie takie, jakie lubisz.
+								</p>
+								<div class="es-steps__steps__container">
+									<div class="es-steps__steps__wrapper es-steps__steps__wrapper--second">
+										<div class="es-steps__steps__item">
+											<img loading="lazy"
+													 class="es-steps__steps__item__image es-steps__steps__item__image--big"
+													 src="./static/img/steps-4.png"
+													 alt="Krok 4">
+											<p class="es-steps__steps-item-title es-steps__steps-item-title--white">1–2 naciśnięcia dźwigni
+											</p>
+											<p class="es-steps__steps__item__text es-steps__steps__item__text--white">woda lekko gazowana</p>
+										</div>
+										<div class="es-steps__steps__item">
+											<img loading="lazy"
+													 class="es-steps__steps__item__image es-steps__steps__item__image--big"
+													 src="./static/img/steps-5.png"
+													 alt="Krok 5">
+											<p class="es-steps__steps-item-title es-steps__steps-item-title--white">3–4 naciśnięcia dźwigni
+											</p>
+											<p class="es-steps__steps__item__text es-steps__steps__item__text--white">woda średnio gazowana
+											</p>
+										</div>
+										<div class="es-steps__steps__item">
+											<img loading="lazy"
+													 class="es-steps__steps__item__image es-steps__steps__item__image--big"
+													 src="./static/img/steps-6.png"
+													 alt="Krok 6">
+											<p class="es-steps__steps-item-title es-steps__steps-item-title--white">5–6 naciśnięcia dźwigni
+											</p>
+											<p class="es-steps__steps__item__text es-steps__steps__item__text--white">
+												woda mocno gazowana
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="es-slider__buttons">
+							<label for="es-slide-1"
+										 class="swiper-button-prev es-swiper-button-prev es-slider__buttons--prev">
+								<img loading="lazy"
+										 loading="lazy"
+										 class="es-slider__buttons--prev__img"
+										 src="./static/img/btn-next.png"
+										 alt="Cofnij do poprzedniego slajdu">
+							</label>
+							<label for="es-slide-2"
+										 class="swiper-button-next es-swiper-button-next es-slider__buttons--next">
+								<img loading="lazy"
+										 loading="lazy"
+										 class="es-slider__buttons--next__img"
+										 src="./static/img/btn-next.png"
+										 alt="Przewiń do następnego slajdu">
+							</label>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="es-faq">
+					<img loading="lazy"
+							 src="./static/img/decoration-3.png"
+							 alt="Bubbles"
+							 class="es-decoration-3">
+					<h2 class="es-faq__title">Dowiedz się więcej o saturatorze SodaStream Art</h2>
+					<div class="es-accordion">
+						<div class="es-accordion__element">
+							<input type="checkbox"
+										 id="acc1"
+										 class="es-accordion__checkbox">
+							<label for="acc1"
+										 class="es-accordion__label">
+								<p class="es-accordion__title es-acc-tab">
+									<img loading="lazy"
+											 class="es-accordion__arrow"
+											 src="./static/img/check.png"
+											 alt="Czy zawiera"
+											 loading="lazy">
+									Na jak długo wystarcza nabój CO2 do saturatora SodaStream Art?
+								</p>
+							</label>
+							<div class="es-accordion__element-content acc-content">
+								<p>
+									<br><br>
+									Jeden cylinder z gazem spożywczym CO₂ wystarczy do nagazowania ok. 60 l wody. Oznacza to, że zastąpisz
+									z nim nawet 40
+									półtoralitrowych butelek jednorazowego użytku!
+									<br><br>
+								</p>
+							</div>
+						</div>
+						<div class="es-accordion__element">
+							<input type="checkbox"
+										 id="acc2"
+										 class="es-accordion__checkbox">
+							<label for="acc2"
+										 class="es-accordion__label">
+								<p class="es-accordion__title es-acc-tab">
+
+									<img loading="lazy"
+											 class="es-accordion__arrow"
+											 src="./static/img/check.png"
+											 alt="Czy zawiera"
+											 loading="lazy">
+									Czy woda z kranu nadaje się do saturatora SodaStream Art?
+								</p>
+							</label>
+							<div class="es-accordion__element-content acc-content">
+								<p>
+									<br><br>
+									Tak, domowy saturator SodaStream Art daje możliwość uzyskania świeżej wody gazowanej z kranówki. Jeśli
+									masz ochotę
+									możesz ją dodatkowo przefiltrować.
+									<br><br>
+								</p>
+							</div>
+						</div>
+						<div class="es-accordion__element">
+							<input type="checkbox"
+										 id="acc3"
+										 class="es-accordion__checkbox">
+							<label for="acc3"
+										 class="es-accordion__label">
+								<p class="es-accordion__title es-acc-tab">
+									Czy SodaStream Art potrzebuje zasilania?
+									<img loading="lazy"
+											 class="es-accordion__arrow"
+											 src="./static/img/check.png"
+											 alt="Czy zawiera"
+											 loading="lazy">
+								</p>
+							</label>
+							<div class="es-accordion__element-content acc-content">
+								<p>
+									<br><br>
+									Miętowy saturator SodaStream Art to urządzenie bezprzewodowe, nie potrzebuje kabli, zasilania prądem
+									czy bateriami. Gaz
+									spożywczy uwalniany jest przy pomocy dźwigni, dzięki czemu woda nasycana jest bąbelkami.
+									<br><br>
+								</p>
+							</div>
+						</div>
+						<div class="es-accordion__element">
+							<input type="checkbox"
+										 id="acc4"
+										 class="es-accordion__checkbox">
+							<label for="acc4"
+										 class="es-accordion__label">
+								<p class="es-accordion__title es-acc-tab">
+									Jakie butelki pasują do SodaStream Art?
+									<img loading="lazy"
+											 class="es-accordion__arrow"
+											 src="./static/img/check.png"
+											 alt="Czy zawiera"
+											 loading="lazy">
+								</p>
+							</label>
+							<div class="es-accordion__element-content acc-content">
+								<p>
+									<br><br>
+									Ekspres do gazowania wody SodaStream Art jest kompatybilny z butelkami wielokrotnego użytku SodaStream
+									Fuse
+									o pojemności 0,5 l i 1 l, butelkami SodaStream My Only Bottle, a także z butelkami termicznymi
+									Fizz&Go.
+									<br><br>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="es-faq__items">
+
+					</div>
+				</div>
+
+				<div class="es-eco">
+					<div class="es-eco__container">
+						<div class="es-eco__left">
+							<img loading="lazy"
+									 src="./static/img/eco.png"
+									 alt="Nowe nawyki"
+									 class="es-eco__img">
+						</div>
+						<div class="es-eco__right">
+							<p class="es-eco__right-title">
+								Zamień stare przyzwyczajenia
+								na&nbsp;nowe&nbsp;EKO&nbsp;nawyki
+							</p>
+							<p class="es-eco__right-description">
+								Żyj bardziej świadomie i zastąp jednorazowe butelki trwałymi i eleganckimi butelkami wielokrotnego
+								użytku!
+								Estetyka,
+								wygoda i ekologia to trio, z którym codzienność smakuje jeszcze lepiej.
+								<br><br>
+								Gazowanie wody w domu to komfort, który przynosi korzyści także Twojemu portfelowi. <span
+											class="es-eco__right-description--bold">Z jednego
+									cylindra CO₂
+									przygotujesz
+									nawet 60 l wody, a z jednego syropu 440 ml – nawet 9 l ulubionego napoju.</span> To również mniej
+								dźwigania!
+							</p>
+						</div>
+					</div>
+					<p class="es-eco__bottom-title">
+						Stwórz swój ulubiony napój z syropami SodaStream – na swoich zasadach
+					</p>
+				</div>
+
+				<div class="es-cross">
+					<div class="es-cross__container">
+						<div class="es-cross__single es-cross__single--1">
+							<img loading="lazy"
+									 src="./static/img/cross-1.png"
+									 alt="Domowe warianty"
+									 class="es-cross__img">
+							<p class="es-cross__single-title">Domowe warianty<br>
+								legendarnych smaków</p>
+							<p class="es-cross__single-description">Syropy SodaStream Pepsi, Mirinda
+								i 7UP to legendarne smaki, które zawsze podkręcają atmosferę chwili. Idealne do posiłku, na spotkania
+								z przyjaciółmi oraz spokojne wieczory w domowymzaciszu.
+							</p>
+						</div>
+
+						<div class="es-cross__single es-cross__single--2">
+							<img loading="lazy"
+									 src="./static/img/cross-2.png"
+									 alt="Wariacje"
+									 class="es-cross__img">
+							<p class="es-cross__single-title es-cross__single-title--blue">Własne wariacje na temat
+								lubianychklasyków</p>
+							<p class="es-cross__single-description es-cross__single-description--blue">
+								Syropy SodaStream Cola, Tonic, Cytryna Limonka i Xtreme Energy to kultowe smaki, które zna każdy – i do
+								których zawsze
+								chce się wracać. Serwuj je solo albo z lodem, miętą
+								i cytrusami - ciesz się klasyką
+								w nowym wydaniu.
+							</p>
+						</div>
+
+						<div class="es-cross__single es-cross__single--3">
+							<img loading="lazy"
+									 src="./static/img/cross-3.png"
+									 alt="Orzeźwiające napoje"
+									 class="es-cross__img">
+							<p class="es-cross__single-title">Orzeźwiające napoje pełne owocowego smaku</p>
+							<p class="es-cross__single-description">
+								Syropy SodaStream Malina, Różowy Grejpfrut, Pomarańcza Mango czy Owoce Leśne to delikatne, lekkie
+								i pełne smaku propozycje dla miłośników orzeźwienia. Doskonałe na leniwe popołudnia, szybkie spotkania i
+								długie rozmowy
+								z bliskimi.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="es-footer">
+					<p class="es-section-title es-footer__hashtag">
+						#Jedna&shy;Soda&shy;Stream&shy;Wiele&shy;Możliwości
+					</p>
+					<img loading="lazy"
+							 class="es-footer__bottles"
+							 src="./static/img/bottles.png"
+							 alt="Wszystkie butelki syropów SodaStream">
+					<div class="es-section">
+					</div>
+				</div>
+				<div class="es-footer__logo-wrapper">
+					<img loading="lazy"
+							 src="./static/img/logo.png"
+							 alt="Logo SodaStream"
+							 class="es-footer__logo">
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
