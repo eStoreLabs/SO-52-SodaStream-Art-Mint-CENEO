@@ -9,19 +9,19 @@
 			@charset "UTF-8";
 			@font-face {
 				font-family: "HurmeGeometricSans3-Bold";
-				src: local("HurmeGeometricSans3-Bold"), url("../fonts/HurmeGeometricSans3-Bold.woff") format("woff");
+				src: local("HurmeGeometricSans3-Bold"), url("./static/fonts/HurmeGeometricSans3-Bold.woff") format("woff");
 			}
 			@font-face {
 				font-family: "HurmeGeometricSans3-Regular";
-				src: local("HurmeGeometricSans3-Regular"), url("../fonts/HurmeGeometricSans3-Regular.woff") format("woff");
+				src: local("HurmeGeometricSans3-Regular"), url("./static/fonts/HurmeGeometricSans3-Regular.woff") format("woff");
 			}
 			@font-face {
 				font-family: "HurmeGeometricSans3-Black";
-				src: local("HurmeGeometricSans3-Black"), url("../fonts/HurmeGeometricSans3-Black.woff") format("woff");
+				src: local("HurmeGeometricSans3-Black"), url("./static/fonts/HurmeGeometricSans3-Black.woff") format("woff");
 			}
 			@font-face {
 				font-family: "HurmeGeometricSans3-Light";
-				src: local("HurmeGeometricSans3-Light"), url("../fonts/HurmeGeometricSans3-Light.woff2") format("woff2");
+				src: local("HurmeGeometricSans3-Light"), url("./static/fonts/HurmeGeometricSans3-Light.woff2") format("woff2");
 			}
 			#es-rc #es-rc-content {
 				font-family: "HurmeGeometricSans3-Regular", sans-serif;
@@ -902,6 +902,7 @@
 			}
 			#es-rc #es-rc-content .es-faq__title {
 				padding-left: 25px;
+				padding-right: 25px;
 				padding-bottom: 20px;
 				font-family: "HurmeGeometricSans3-Bold", sans-serif;
 				font-size: 20px;
@@ -936,6 +937,7 @@
 				margin-bottom: 10px;
 				padding-bottom: 30px;
 				border: none;
+				width: 95%;
 			}
 			#es-rc #es-rc-content .es-faq .es-accordion__element:last-of-type {
 				border-bottom: none;
@@ -1016,6 +1018,8 @@
 				background: #005BAB;
 				padding-top: 50px;
 				padding-bottom: 50px;
+				padding-left: 20px;
+    		padding-right: 20px;
 			}
 			#es-rc #es-rc-content .es-eco__img {
 				max-width: 100%;
@@ -1032,6 +1036,11 @@
 			}
 			#es-rc #es-rc-content .es-eco__right-description--bold {
 				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+			}
+			#es-rc #es-rc-content .es-eco__bottom-title {
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
+				padding-top: 50px;
+				text-align: center;
 			}
 			#es-rc #es-rc-content .es-cross__container {
 				display: flex;
@@ -1317,6 +1326,12 @@
 					right: 20px;
 					width: 140px;
 				}
+				#es-rc #es-rc-content .es-steps__title--white {
+					margin-top: -150px;
+				}
+				#es-rc #es-rc-content .es-steps__subtitle--white {
+					margin-bottom: 50px;	
+				}
 			}/*# sourceMappingURL=styles.css.map */
 		</style>
 </head>
@@ -1432,7 +1447,7 @@
 								Quick Connect
 							</p>
 							<p class="es-design__single-subtitle">Cylinder z gazem spożywczym
-								CO2 zainstalujesz prosto, intuicyjnie i bez wkręcania.
+								CO₂ zainstalujesz prosto, intuicyjnie i bez wkręcania.
 							</p>
 						</div>
 						<div class="es-design__single">
@@ -1632,7 +1647,6 @@
 							<label for="es-slide-1"
 										 class="swiper-button-prev es-swiper-button-prev es-slider__buttons--prev">
 								<img loading="lazy"
-										 loading="lazy"
 										 class="es-slider__buttons--prev__img"
 										 src="./static/img/btn-next.png"
 										 alt="Cofnij do poprzedniego slajdu">
@@ -1640,7 +1654,6 @@
 							<label for="es-slide-2"
 										 class="swiper-button-next es-swiper-button-next es-slider__buttons--next">
 								<img loading="lazy"
-										 loading="lazy"
 										 class="es-slider__buttons--next__img"
 										 src="./static/img/btn-next.png"
 										 alt="Przewiń do następnego slajdu">
@@ -1655,7 +1668,7 @@
 							 src="./static/img/decoration-3.png"
 							 alt="Bubbles"
 							 class="es-decoration-3">
-					<h2 class="es-faq__title">Dowiedz się więcej o saturatorze SodaStream Art</h2>
+					<h2 class="es-faq__title">Dowiedz się więcej o saturatorze SodaStream&nbsp;Art</h2>
 					<div class="es-accordion">
 						<div class="es-accordion__element">
 							<input type="checkbox"
@@ -1667,9 +1680,8 @@
 									<img loading="lazy"
 											 class="es-accordion__arrow"
 											 src="./static/img/check.png"
-											 alt="Czy zawiera"
-											 loading="lazy">
-									Na jak długo wystarcza nabój CO2 do saturatora SodaStream Art?
+											 alt="Czy zawiera">
+									Na jak długo wystarcza nabój CO₂ do saturatora SodaStream Art?
 								</p>
 							</label>
 							<div class="es-accordion__element-content acc-content">
@@ -1693,8 +1705,7 @@
 									<img loading="lazy"
 											 class="es-accordion__arrow"
 											 src="./static/img/check.png"
-											 alt="Czy zawiera"
-											 loading="lazy">
+											 alt="Czy zawiera">
 									Czy woda z kranu nadaje się do saturatora SodaStream Art?
 								</p>
 							</label>
@@ -1719,8 +1730,7 @@
 									<img loading="lazy"
 											 class="es-accordion__arrow"
 											 src="./static/img/check.png"
-											 alt="Czy zawiera"
-											 loading="lazy">
+											 alt="Czy zawiera">
 								</p>
 							</label>
 							<div class="es-accordion__element-content acc-content">
@@ -1744,8 +1754,7 @@
 									<img loading="lazy"
 											 class="es-accordion__arrow"
 											 src="./static/img/check.png"
-											 alt="Czy zawiera"
-											 loading="lazy">
+											 alt="Czy zawiera">
 								</p>
 							</label>
 							<div class="es-accordion__element-content acc-content">
@@ -1794,7 +1803,7 @@
 						</div>
 					</div>
 					<p class="es-eco__bottom-title">
-						Stwórz swój ulubiony napój z syropami SodaStream – na swoich zasadach
+						Stwórz swój ulubiony napój z syropami SodaStream – na&nbsp;swoich zasadach
 					</p>
 				</div>
 
