@@ -10,18 +10,22 @@
 			@font-face {
 				font-family: "HurmeGeometricSans3-Bold";
 				src: local("HurmeGeometricSans3-Bold"), url("./static/fonts/HurmeGeometricSans3-Bold.woff") format("woff");
+				font-weight: 700;
 			}
 			@font-face {
 				font-family: "HurmeGeometricSans3-Regular";
 				src: local("HurmeGeometricSans3-Regular"), url("./static/fonts/HurmeGeometricSans3-Regular.woff") format("woff");
+				font-weight: 400;
 			}
 			@font-face {
 				font-family: "HurmeGeometricSans3-Black";
 				src: local("HurmeGeometricSans3-Black"), url("./static/fonts/HurmeGeometricSans3-Black.woff") format("woff");
+				font-weight: 900;
 			}
 			@font-face {
 				font-family: "HurmeGeometricSans3-Light";
 				src: local("HurmeGeometricSans3-Light"), url("./static/fonts/HurmeGeometricSans3-Light.woff2") format("woff2");
+				font-weight: 300;
 			}
 			#es-rc #es-rc-content {
 				font-family: "HurmeGeometricSans3-Regular", sans-serif;
@@ -929,6 +933,13 @@
 			#es-rc #es-rc-content [type=checkbox] + label:before {
 				display: none;
 			}
+			#es-rc #es-rc-content .es-faq .es-accordion [type=checkbox] + label {
+				display: block !important;
+				padding-left: 0;
+				line-height: normal;
+				height: auto;
+				margin-bottom: 0;
+			}
 			#es-rc #es-rc-content .es-faq .es-accordion {
 				margin: 0 auto;
 				max-width: 990px;
@@ -964,8 +975,7 @@
 				background-color: #13294b;
 				transition: all 200ms ease-out;
 				border-radius: 5px;
-				font-family: "HurmeGeometricSans3-Regular", sans-serif;
-				font-weight: 700;
+				font-family: "HurmeGeometricSans3-Bold", sans-serif;
 				cursor: pointer;
 				z-index: 1;
 				position: relative;
@@ -1122,7 +1132,6 @@
 					font-size: 21px;
 					text-align: center;
 					color: #13294b !important;
-					font-weight: bold;
 					margin-bottom: 30px;
 				}
 				#es-rc #es-rc-content .es-faq .es-accordion {
